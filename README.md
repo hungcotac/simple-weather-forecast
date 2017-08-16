@@ -1,0 +1,1 @@
+This only my small project for getting forecast data from inputed location
