@@ -1,3 +1,4 @@
+
 function asyncAdd(a, b) { // a Function use Promise as a async way to execute a function
     return new Promise(function (resolve, reject) {
         setTimeout(function () { // Simulate
@@ -11,14 +12,14 @@ function asyncAdd(a, b) { // a Function use Promise as a async way to execute a 
 }
 
 // this function will return a promise;
-var sumPromise = asyncAdd(15, '-30');
+var sumPromise = asyncAdd(15, -30);
 
 /*** 
  * This command here will handle the result come after promise complete.
  * Promise's then() function takes 2 function as params, one for resolve and one for reject.
 */
 
-sum.then(function (result) { // this is handler function for success case (resolve)
+sumPromise.then(function (result) { // this is handler function for success case (resolve)
     console.log(result);
 }, function(errorMessage){ // this is handler function for failed case (reject)
     console.log(errorMessage);
